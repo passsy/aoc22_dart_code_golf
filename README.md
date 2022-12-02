@@ -1,6 +1,6 @@
-# Advent of Code 22 in Dart (Code Golf)
+# Advent of Code 2022 in Dart (Code Golf)
 
-This is my attempt at solving the [Advent of Code 2018](https://adventofcode.com/2018) puzzles in the shortest possible code using [Dart](https://dart.dev/) `2.18`.
+This is my attempt at solving the [Advent of Code 2022](https://adventofcode.com/2022) puzzles in the shortest possible code using [Dart](https://dart.dev/) `2.18`.
 
 You can find the solution in `/bin`.
 
