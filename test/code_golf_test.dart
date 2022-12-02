@@ -14,12 +14,12 @@ void main() {
     final filename = file.path
         .split('/')
         .last
-        .replaceFirst('.dart', '')
+        .replaceAll('.min.dart', '')
         .split('_')
         .join(' ');
     test('$filename fits in a tweet', () {
       final length = file.readAsStringSync().length;
-      print("${file.path.split('/').last}: ${length} chars");
+      print("$filename: ${length} chars");
       expect(length, lessThan(280));
     });
   }
