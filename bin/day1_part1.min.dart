@@ -1,0 +1,1 @@
+main(a,{c=0,l,s=0}){for(l in a)l==''?'${c=c>s?c:s}${s=0}':s+=int.parse(l);print(c);}

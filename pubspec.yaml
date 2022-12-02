@@ -1,0 +1,14 @@
+name: d23_aoc22
+description: Dart kata aoc22
+publish_to: 'none'
+version: 0.0.1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  async: ^2.10.0
+
+dev_dependencies:
+  lint: ^2.0.0
+  test: ^1.17.0

@@ -1,0 +1,1 @@
+main(a,{c,l,s=0,r}){c=[];for(l in a)l==''?'${c.add(s)}${s=0}':s+=int.parse(l);r=[...(c..sort()).reversed];print(r[0]+r[1]+r[2]);}
