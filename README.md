@@ -8,6 +8,14 @@ I created `.min.dart` file containing the shortest possible code for each puzzle
 
 The normal `dart` files are the same code I used to solve the puzzles in the first place before starting to code golf the solutions.
 
+## Rules
+
+- The Dart program has to have a `main(List<String> args)` entrypoint.
+- The input is read from file and passed into the `main` function line by line.
+- External dependencies are not allowed.
+- The output is printed via `print()`
+
+See the [`mainTester()`](https://github.com/passsy/aoc22_dart_code_golf/blob/main/test/main_tester.dart) function as reference
 
 ## Results
 
