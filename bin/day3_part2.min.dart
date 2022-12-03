@@ -1,15 +1,1 @@
-void main(List<String> args) {
-  int sum = 0;
-  for (int i = 0; i < args.length; i = i + 3) {
-    final backpacks = args
-        .skip(i)
-        .take(3)
-        .map((it) => it.runes.map((c) => c > 96 ? (c - 96) : (c - 38)));
-    final common = backpacks
-        .reduce((a, b) => a.where((it) => b.contains(it)).toList())
-        .toSet()
-        .first;
-    sum += common;
-  }
-  print(sum);
-}
+main(List<String>a,{i=0,s=0}){for(;i<a.length;i+=3)s+=a.skip(i).take(3).map((String l)=>l.runes.map((c)=>c>96?c-96:c-38)).reduce((a,b)=>a.where((c)=>b.contains(c))).first;print(s);}
