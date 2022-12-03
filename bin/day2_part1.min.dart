@@ -1,1 +1,1 @@
-main(a,{s,l}){for(l in a)s+={'A X':4,'A Y':8,'A Z':3,'B X':1,'B Y':5,'B Z':9,'C X':7,'C Y':2,'C Z':6}[l]!;print(s);}
+main(a,{s=0,l}){for(l in a)s+={'A X':4,'A Y':8,'A Z':3,'B X':1,'B Y':5,'B Z':9,'C X':7,'C Y':2,'C Z':6}[l]!;print(s);}

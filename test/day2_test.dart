@@ -19,10 +19,10 @@ void main() {
 
     test('golf part 1', () {
       final output = testMain(
-        day2_part1.main,
+        day2_part1_min.main,
         input: File('data/day2_sample.txt').readAsStringSync(),
       );
-      print(output);
+      expect(output, '15');
     });
 
     test('solve part 1', () {
@@ -43,7 +43,7 @@ void main() {
 
     test('golf part 2', () {
       final output = testMain(
-        day2_part2.main,
+        day2_part2_min.main,
         input: File('data/day2_sample.txt').readAsStringSync(),
       );
       expect(output, '12');
