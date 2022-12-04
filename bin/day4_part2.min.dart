@@ -1,1 +1,1 @@
-main(q,{i=int.parse,a,b,x,y,s=0,p,m,n}){for(p in q){n=p.split('-');m=p.split(',');a=i(n[0]);b=i(m[0].split('-')[1]);x=i(m[1].split('-')[0]);y=i(n.last);s+=a<=x&&b>=x||x<=a &&y>=a?1:0;}print(s);}
+main(q,{p,s=0}){for(p in q){w(l)=>int.parse(RegExp(r'(\d+)-(\d+),(\d+)-(\d+)').firstMatch(p)![l]!);s+=w(1)<=w(3)&&w(2)>=w(3)||w(3)<=w(1)&&w(4)>=w(1)?1:0;}print(s);}
