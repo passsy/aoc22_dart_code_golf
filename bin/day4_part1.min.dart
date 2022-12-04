@@ -1,1 +1,1 @@
-main(q,{a,b,x,y,s=0,p}){for(p in q){w(l)=>int.parse(RegExp(r'(\d+)-(\d+),(\d+)-(\d+)').firstMatch(p)![l]!);a=w(1);b=w(2);x=w(3);y=w(4);s+=a<=x&&b>=y||a>=x&&b<=y?1:0;}print(s);}
+main(q,{p,s=0}){for(p in q){w(l)=>int.parse(RegExp(r'(\d+)-(\d+),(\d+)-(\d+)').firstMatch(p)![l]!);s+=w(1)<=w(3)&&w(2)>=w(4)||w(1)>=w(3)&&w(2)<=w(4)?1:0;}print(s);}
