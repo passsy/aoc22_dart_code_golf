@@ -1,1 +1,1 @@
-main(q,{p,s=0}){for(p in q){w(l)=>int.parse(p.split(RegExp(r'(\D)'))[l]!);s+=w(0)<=w(2)&&w(1)>=w(3)||w(0)>=w(2)&&w(1)<=w(3)?1:0;}print(s);}
+main(q,{p,s=0}){for(p in q){w(l)=>int.parse(p.split(RegExp(r'(\D)'))[l]);s+=w(0)<=w(2)&&w(1)>=w(3)||w(0)>=w(2)&&w(1)<=w(3)?1:0;}print(s);}
