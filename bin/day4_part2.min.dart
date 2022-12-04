@@ -1,9 +1,1 @@
-void main(List<String> args) {
-  print(args.where((pair) {
-    int a = int.parse(pair.split('-')[0]);
-    int b = int.parse(pair.split(',')[0].split('-')[1]);
-    int x = int.parse(pair.split(',')[1].split('-')[0]);
-    int y = int.parse(pair.split('-').last);
-    return a <= x && b >= x || x <= a && y >= a;
-  }).length);
-}
+main(q,{i=int.parse,a,b,x,y,s=0,p,m,n}){for(p in q){n=p.split('-');m=p.split(',');a=i(n[0]);b=i(m[0].split('-')[1]);x=i(m[1].split('-')[0]);y=i(n.last);s+=a<=x&&b>=x||x<=a &&y>=a?1:0;}print(s);}
