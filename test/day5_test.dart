@@ -38,7 +38,7 @@ void main() {
         day5_part2.main,
         input: File('data/day5_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, 'MCD');
     });
 
     test('golf part 2', () {
@@ -46,7 +46,7 @@ void main() {
         day5_part2_min.main,
         input: File('data/day5_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, 'MCD');
     });
 
     test('solve part 2', () {
