@@ -1,0 +1,1 @@
+main(a,{c,i=0}){c=[];for(;;){i++;if(c.toSet().length==14){print(i);return;}c=[a[0][i],...c].take(14);}}
