@@ -31,6 +31,9 @@ Part 1: [168 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/b
 #### Day 4
 Part 1: [138 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day4_part1.min.dart) | Part 2: [136 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day4_part2.min.dart)
 
+#### Day 5
+Part 1: [393 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day5_part1.min.dart) | Part 2: [384 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day5_part2.min.dart)
+
 ## License
 ```
 Copyright 2022 Pascal Welsch
