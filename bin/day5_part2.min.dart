@@ -1,3 +1,1 @@
-main(a, {i}) {
-  print(0);
-}
+main(a,{s,c=0,l,j,f,i=0,g}){s=List.generate(9,(i)=>[]);for(;i<a.length;i++){l=a[i];if(l.startsWith(' 1')){c=1;i++;}else{if(c==0)for(j=0;j<l.length;j++)if(RegExp(r'\w').hasMatch(l[j]))s[j~/4].add(l[j]);if(c!=0){g=(i)=>int.parse(l.split(RegExp(r'(\D+)'))[i]);f=s[g(2)-1];j=f.sublist(0,g(1));f.removeRange(0,g(1));s[g(3)-1].insertAll(0,j);}}}print(s.map((e)=>e.isEmpty?'':e[0]).join());}
