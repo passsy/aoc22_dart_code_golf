@@ -1,3 +1,1 @@
-main(a, {i}) {
-  print(0);
-}
+main(a,{c,r,w,p,o}){w=r=N('/');var t=[];for(c in a){if(c.endsWith('..')){w=w.p!;}else if(c.contains('\$ cd')){o=w;o.c.add(w=N('${w.n}/${c.substring(5)}',p:o));t.add(w);}else{if(!c.contains('\$')&&!c.contains('dir')){p=c.split(' ');w.c.add(N(p[1],f:int.parse(p[0])));}}}c=[...t.where((a)=>a.s>r.s-40000000)]..sort((a,b)=>a.s.compareTo(b.s));print(c[0].s);}class N{var n;List<N> c=[];var f;N?p;N(this.n,{this.f,this.p});int get s=>f??c.fold(0,(a,b)=>a+b.s);}

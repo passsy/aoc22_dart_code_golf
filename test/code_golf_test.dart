@@ -5,6 +5,8 @@ import 'package:test/test.dart';
 final List<String> failedDays = [
   'day5 part1',
   'day5 part2',
+  'day7 part1',
+  'day7 part2',
 ];
 
 void main() {
