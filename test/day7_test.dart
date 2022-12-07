@@ -16,13 +16,28 @@ void main() {
       );
       expect(output, '95437');
     });
+    test('input part 1', () {
+      final output = testMain(
+        day7_part1.main,
+        input: File('data/day7_input.txt').readAsStringSync(),
+      );
+      expect(output, '1723892');
+    });
 
-    test('golf part 1', () {
+    test('golf part 1 sample ', () {
       final output = testMain(
         day7_part1_min.main,
         input: File('data/day7_sample.txt').readAsStringSync(),
       );
       expect(output, '95437');
+    });
+
+    test('golf part 1 input', () {
+      final output = testMain(
+        day7_part1_min.main,
+        input: File('data/day7_input.txt').readAsStringSync(),
+      );
+      expect(output, '1723892');
     });
 
     test('solve part 1', () {
@@ -38,7 +53,7 @@ void main() {
         day7_part2.main,
         input: File('data/day7_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, '24933642');
     });
 
     test('golf part 2', () {
@@ -46,7 +61,7 @@ void main() {
         day7_part2_min.main,
         input: File('data/day7_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, '24933642');
     });
 
     test('solve part 2', () {
@@ -54,6 +69,7 @@ void main() {
         day7_part2.main,
         input: File('data/day7_input.txt').readAsStringSync(),
       );
+      expect(output, isNot(0));
       print(output);
     });
   });
