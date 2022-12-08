@@ -1,3 +1,4 @@
+// did not even attempt golfing, not a good challenge for dart
 void main(List<String> args) {
   final map = [...args.map((e) => [...e.split('').map((e) => int.parse(e))])];
   int max = 0;
