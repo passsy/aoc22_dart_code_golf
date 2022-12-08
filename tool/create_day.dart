@@ -70,7 +70,7 @@ void main() {
         day${day}_part1.main,
         input: File('data/day${day}_input.txt').readAsStringSync(),
       );
-      expect(output, isNot(0));
+      expect(output, isNot('0'));
       print(output);
     });
 
@@ -95,7 +95,7 @@ void main() {
         day${day}_part2.main,
         input: File('data/day${day}_input.txt').readAsStringSync(),
       );
-      expect(output, isNot(0));
+      expect(output, isNot('0'));
       print(output);
     });
   });
