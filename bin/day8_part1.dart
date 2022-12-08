@@ -4,8 +4,8 @@ void main(List<String> args) {
   List<int> row(int n) => map[n];
   List<int> col(int n) => map.map((e) => e[n]).toList();
 
-  for (int x = 1; x < map.length - 1; x++) {
-    for (int y = 1; y < map[x].length - 1; y++) {
+  for (int y = 1; y < map.length - 1; y++) {
+    for (int x = 1; x < map[0].length - 1; x++) {
       final t = map[y][x];
       if (row(y).sublist(0, x).every((e) => e < t) ||
           row(y).sublist(x + 1).every((e) => e < t) ||

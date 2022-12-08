@@ -55,7 +55,7 @@ void main() {
         day8_part2.main,
         input: File('data/day8_input.txt').readAsStringSync(),
       );
-      expect(output, isNot('0'));
+      expect(output, '345168');
       print(output);
     });
   });
