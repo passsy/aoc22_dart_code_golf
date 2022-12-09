@@ -39,7 +39,15 @@ void main() {
         day9_part2.main,
         input: File('data/day9_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, '1');
+    });
+
+    test('big sample part 2', () {
+      final output = testMain(
+        day9_part2.main,
+        input: File('data/day9_sample2.txt').readAsStringSync(),
+      );
+      expect(output, '36');
     });
 
     test('golf part 2', () {
@@ -47,7 +55,7 @@ void main() {
         day9_part2_min.main,
         input: File('data/day9_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, '1');
     });
 
     test('solve part 2', () {

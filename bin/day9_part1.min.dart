@@ -1,3 +1,3 @@
 main(a, {i}) {
-  print(0);
+  // another bad day for golfing in dart
 }
