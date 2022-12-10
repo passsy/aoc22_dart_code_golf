@@ -1,3 +1,1 @@
-main(a, {i}) {
-  print(0);
-}
+main(a,{s=0,x=1,c=0,i}){q(){if((++c+20)%40==0)s+=x*c;}for(i in a){q();if(i!='noop'){q();x+=int.parse(i.substring(5));}}print(s);}

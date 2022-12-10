@@ -22,7 +22,7 @@ void main() {
         day10_part1_min.main,
         input: File('data/day10_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, '13140');
     });
 
     test('solve part 1', () {
@@ -53,7 +53,13 @@ void main() {
         day10_part2_min.main,
         input: File('data/day10_sample.txt').readAsStringSync(),
       );
-      expect(output, '100');
+      expect(output, '''
+##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....''');
     });
 
     test('solve part 2', () {

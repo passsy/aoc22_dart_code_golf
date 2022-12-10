@@ -1,3 +1,1 @@
-main(a, {i}) {
-  print(0);
-}
+main(a,{i,x=1,c=0,l="",p}){q(){p=c++%40;l+=x>=p-1&&x<=p+1?"#":'.';if(p==39){print(l);l="";}}for(i in a){q();if(i!='noop'){q();x+=int.parse(i.substring(5));}}}
