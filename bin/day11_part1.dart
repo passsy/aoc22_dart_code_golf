@@ -1,5 +1,3 @@
-
-
 void main(List<String> args) {
   List<Monkey> monkeys = [];
 
@@ -36,10 +34,7 @@ void main(List<String> args) {
     monkeys.add(Monkey(id, items, operation, throwItem, monkeys));
   }
 
-  // print(monkeys);
-
   for (int round = 1; round <= 20; round++) {
-    // print("Round $round");
     for (final monkey in monkeys) {
       monkey.doOperation();
     }

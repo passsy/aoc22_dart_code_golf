@@ -1,4 +1,5 @@
 import 'dart:io';
+
 void main(List<String> args) {
   List<Monkey> monkeys = [];
 
@@ -35,8 +36,6 @@ void main(List<String> args) {
     monkeys.add(Monkey(id, mod, items, operation, throwItem));
   }
 
-  // print(monkeys.join('\n'));
-
   final lcm = monkeys.map((m) => m.divisor).reduce((a, b) => a * b) as int;
 
   for (int round = 1; round <= 10000; round++) {
@@ -54,25 +53,6 @@ void main(List<String> args) {
         targetMonkey.items.add(result);
       }
     }
-
-    // if ([1, 2, 20, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
-    //     .contains(
-    //     round)) {
-    //   print('Round $round\n'
-    //       '0:${monkeys
-    //       .firstWhere((m) => m.id == 0)
-    //       .inspections}\n'
-    //       '1:${monkeys
-    //       .firstWhere((m) => m.id == 1)
-    //       .inspections}\n'
-    //       '2:${monkeys
-    //       .firstWhere((m) => m.id == 2)
-    //       .inspections}\n'
-    //       '3:${monkeys
-    //       .firstWhere((m) => m.id == 3)
-    //       .inspections}\n'
-    //   );
-    // }
   }
 
   monkeys..sort((a, b) => b.inspections - a.inspections);

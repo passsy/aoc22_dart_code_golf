@@ -1,1 +1,2 @@
+// Not worth golfing
 main(List a,{m,p=0,y=1,x}){m=[...a.map((e)=>[...e.split('').map((e)=>int.parse(e))])];col(n)=>[...m.map((e)=>e[n])];for(y;y<m.length-1;y++)for(x=1;x<m[0].length-1;x++){f(List l)=>l.every((e)=>e<m[y][x]);if(f(m[y].sublist(0,x))||f(m[y].sublist(x+1))||f(col(x).sublist(0,y))||f(col(x).sublist(y+1)))p++;}print(p+m[0].length*2+a.length*2-4);}

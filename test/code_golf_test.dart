@@ -2,15 +2,6 @@ import 'dart:io';
 
 import 'package:test/test.dart';
 
-final List<String> failedDays = [
-  'day5 part1',
-  'day5 part2',
-  'day7 part1',
-  'day7 part2',
-  'day8 part1',
-  'day8 part2',
-];
-
 void main() {
   final files = Directory('bin')
       .listSync()
@@ -26,13 +17,19 @@ void main() {
         .replaceAll('.min.dart', '')
         .split('_')
         .join(' ');
+
     test('$filename fits in a tweet', () {
-      final length = file.readAsStringSync().length;
-      print("$filename: ${length} chars");
-      if (failedDays.contains(filename)) {
-        markTestSkipped('$filename does not fit in a tweet');
+      final content = file.readAsStringSync();
+      final length = content.length;
+      final giveUpComment = '// Not worth golfing';
+      final givenUp = content.contains(giveUpComment);
+      if (givenUp) {
+        print(
+            "$filename: ${length - giveUpComment.length - '\n'.length} chars");
+        markTestSkipped('Not worth golfing');
         return;
       }
+      print("$filename: ${length} chars");
       expect(length, lessThan(280));
     });
   }

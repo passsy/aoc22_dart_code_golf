@@ -1,1 +1,2 @@
+// Not worth golfing
 main(a,{c,r,w,p,o}){w=r=N('/');var t=[];for(c in a){if(c.endsWith('..')){w=w.p!;}else if(c.contains('\$ cd')){o=w;o.c.add(w=N('${w.n}/${c.substring(5)}',p:o));t.add(w);}else{if(!c.contains('\$')&&!c.contains('dir')){p=c.split(' ');w.c.add(N(p[1],f:int.parse(p[0])));}}}w=0;for(c in t)w+=c.s<100000?c.s:0;print(w);}class N{var n;List<N> c=[];var f;N?p;N(this.n,{this.f,this.p});int get s=>f??c.fold(0,(a,b)=>a+b.s);}

@@ -49,6 +49,49 @@ Part 1: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/b
 #### Day 10
 Part 1: [129 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day10_part1.min.dart) | Part 2: [158 chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day10_part2.min.dart)
 
+#### Day 11
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day11_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day11_part2.min.dart)
+
+#### Day 12
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day12_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day12_part2.min.dart)
+
+#### Day 13
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day13_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day13_part2.min.dart)
+
+#### Day 14
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day14_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day14_part2.min.dart)
+
+#### Day 15
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day15_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day15_part2.min.dart)
+
+#### Day 16
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day16_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day16_part2.min.dart)
+
+#### Day 17
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day17_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day17_part2.min.dart)
+
+#### Day 18
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day18_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day18_part2.min.dart)
+
+#### Day 19
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day19_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day19_part2.min.dart)
+
+#### Day 20
+Part 1: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day20_part1.min.dart) | Part 2: [- chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day20_part2.min.dart)
+
+#### Day 21
+Part 1: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day21_part1.min.dart) | Part 2: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day21_part2.min.dart)
+
+#### Day 22
+Part 1: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day22_part1.min.dart) | Part 2: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day22_part2.min.dart)
+
+#### Day 23
+Part 1: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day23_part1.min.dart) | Part 2: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day23_part2.min.dart)
+
+#### Day 24
+Part 1: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day24_part1.min.dart) | Part 2: [>1k chars](https://github.com/passsy/aoc22_dart_code_golf/blob/master/bin/day24_part2.min.dart)
+
+
 
 ## License
 ```
