@@ -3,14 +3,16 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:test/fake.dart';
+import 'package:test/scaffolding.dart';
 
 /// Calls a main function with input as arguments (splitted by line) and returns the output (stdout) of the program as full String
-String testMain(void Function(List<String>) main, {String? input}) {
+String testMain(void Function(List<String>) main,
+    {String? input, String split = '\n'}) {
   final stdout = FakeStdoutStream();
 
   runZoned(
     () => IOOverrides.runZoned(
-      () => main(input?.split('\n') ?? []),
+      () => main(input?.split(split) ?? []),
       stdout: () => stdout,
     ),
     zoneSpecification: ZoneSpecification(
@@ -20,7 +22,6 @@ String testMain(void Function(List<String>) main, {String? input}) {
       },
     ),
   );
-
   return stdout.lines.join('\n');
 }
 
