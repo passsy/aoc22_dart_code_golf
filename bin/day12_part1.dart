@@ -22,101 +22,49 @@ void main(List<String> args) {
     }
   }
 
-  final positions = grid.fold([], (list, e) => list..addAll(e));
+  final positions = grid.fold<List<Pos>>([], (list, e) => list..addAll(e));
 
-  List<Pos> neighbors(Pos p) {
+  List<Pos> neighborsOf(Pos p) {
     final List<Pos> n = [];
     if (p.x > 0) {
-      n.add(positions.firstWhere((e) => e == Pos(p.x - 1, p.y)) as Pos);
+      n.add(positions.firstWhere((e) => e == Pos(p.x - 1, p.y)));
     }
     if (p.x < grid.length - 1) {
-      n.add(positions.firstWhere((e) => e == Pos(p.x + 1, p.y)) as Pos);
+      n.add(positions.firstWhere((e) => e == Pos(p.x + 1, p.y)));
     }
     if (p.y > 0) {
-      n.add(positions.firstWhere((e) => e == Pos(p.x, p.y - 1)) as Pos);
+      n.add(positions.firstWhere((e) => e == Pos(p.x, p.y - 1)));
     }
     if (p.y < grid[0].length - 1) {
-      n.add(positions.firstWhere((e) => e == Pos(p.x, p.y + 1)) as Pos);
+      n.add(positions.firstWhere((e) => e == Pos(p.x, p.y + 1)));
     }
     return n;
   }
 
-  // int bestPath = grid.length * grid[0].length;
-  // Iterable<List<Pos>> allPaths(List<Pos> path) sync* {
-  //   final last = path.last;
-  //   final possibilities = neighbors(last)
-  //       .where((p) => p.height == last.height + 1 || p.height == last.height)
-  //       .where((p) => !path.contains(p))
-  //       .toList();
-  //   possibilities..sort((a, b) => a.distance(end) - b.distance(end));
-  //
-  //   for (final position in possibilities) {
-  //     final distance = position.distance(end);
-  //     // printPathOnGrid(path, grid);
-  //     if (path.length >= bestPath) {
-  //       continue;
-  //     }
-  //     if (path.contains(position)) {
-  //       // touching myself
-  //       continue;
-  //     }
-  //
-  //     if (position == end) {
-  //       bestPath = path.length < bestPath ? path.length : bestPath;
-  //       yield [...path, end];
-  //     }
-  //     // print(path.length);
-  //     yield* allPaths([...path, position]);
-  //   }
-  //   // no further paths, did not find end
-  // }
-
-  int bestPath = grid.length * grid[0].length;
-  List<List<Pos>> allPaths(Pos start) {
-    final List<List<Pos>> stack = [
-      [start]
-    ];
-    final List<List<Pos>> completedPaths = [];
-
-    while (stack.isNotEmpty) {
-      stack.sort((a, b) {
-        final factorA = a.last.distance(end) ~/ a.length;
-        final factorB = b.last.distance(end) ~/ b.length;
-        return factorB - factorA;
-      });
-
-      final path = stack.removeAt(0);
-      final last = path.last;
-
-      final possibilities = neighbors(last)
-          .where((p) => p.height == last.height + 1 || p.height == last.height)
-          .where((p) => !path.contains(p))
-          .toList();
-
-      for (final position in possibilities) {
-        if (path.length >= bestPath) {
-          continue;
+  start.shortestDistance = 0;
+  final List<Pos> unsettledNodes = [start];
+  final Set<Pos> settledNodes = {};
+  while (unsettledNodes.isNotEmpty) {
+    final pos = unsettledNodes.reduce((value, element) =>
+        value.shortestDistance < element.shortestDistance ? value : element);
+    unsettledNodes.remove(pos);
+    final neighbors = neighborsOf(pos);
+    for (final next in neighbors) {
+      if (settledNodes.contains(next)) {
+        continue;
+      }
+      if (next.height <= pos.height + 1) {
+        if (pos.shortestDistance + 1 < next.shortestDistance) {
+          next.shortestDistance = pos.shortestDistance + 1;
+          unsettledNodes.add(next);
         }
-        if (path.contains(position)) {
-          // touching myself
-          continue;
-        }
-        print(path.length);
-
-        if (position == end) {
-          bestPath = path.length < bestPath ? path.length : bestPath;
-          completedPaths.add([...path, end]);
-        }
-        stack.add([...path, position]);
       }
     }
-
-    return completedPaths;
+    settledNodes.add(pos);
   }
 
-  final all = allPaths(start).toList();
-  all.sort((a, b) => a.length - b.length);
-  print(all.first.length - 1);
+  print(
+      settledNodes.where((e) => e == end).map((e) => e.shortestDistance).first);
 }
 
 void printPathOnGrid(List<Pos> path, List<List<Pos>> grid) {
@@ -140,6 +88,7 @@ class Pos {
   final int x;
   final int y;
   int height = 0;
+  int shortestDistance = 1000000;
 
   Pos(this.x, this.y);
 
