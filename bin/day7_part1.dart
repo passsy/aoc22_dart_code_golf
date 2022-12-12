@@ -1,6 +1,6 @@
 void main(List<String> args) {
   Node cwd = root;
-  final tree = [];
+  final tree = <Node>[];
   for (String c in args) {
     if (c.startsWith('\$ cd')) {
       if (c.endsWith('..')) {
@@ -28,7 +28,10 @@ void main(List<String> args) {
     // print('Unhandled: $c');
   }
 
-  final size = tree.where((a) => a.size < 100000).map((a) => a.size).reduce((a, b) => a + b);
+  final size = tree
+      .where((a) => a.size < 100000)
+      .map((a) => a.size)
+      .reduce((a, b) => a + b);
 
   print(size);
 }
@@ -42,7 +45,7 @@ class Node {
   Node.file(this.name, this.fileSize) : parent = null;
 
   Node.dir(String name, this.parent)
-      :name= name.replaceAll('///', '/').replaceAll('//', '/'),
+      : name = name.replaceAll('///', '/').replaceAll('//', '/'),
         fileSize = null;
 
   int get size => fileSize ?? children.fold(0, (a, b) => a + b.size);
@@ -53,4 +56,4 @@ class Node {
   }
 }
 
-final root = Node.dir('/',null);
+final root = Node.dir('/', null);
