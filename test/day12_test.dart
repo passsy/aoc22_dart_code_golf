@@ -17,14 +17,6 @@ void main() {
       expect(output, '31');
     });
 
-    test('sample part 2 hard', () {
-      final output = testMain(
-        day12_part1.main,
-        input: File('data/day12_sample2.txt').readAsStringSync(),
-      );
-      expect(output, '31');
-    });
-
     test('golf part 1', () {
       final output = testMain(
         day12_part1_min.main,
