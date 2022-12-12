@@ -8,7 +8,6 @@ import 'package:test/scaffolding.dart';
 /// Calls a main function with input as arguments (splitted by line) and returns the output (stdout) of the program as full String
 String testMain(void Function(List<String>) main,
     {String? input, String split = '\n'}) {
-  main(input?.split(split) ?? []);
   final stdout = FakeStdoutStream();
 
   runZoned(
