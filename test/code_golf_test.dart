@@ -24,9 +24,9 @@ void main() {
       final giveUpComment = '// Not worth golfing';
       final givenUp = content.contains(giveUpComment);
       if (givenUp) {
-        print(
-            "$filename: ${length - giveUpComment.length - '\n'.length} chars");
-        markTestSkipped('Not worth golfing');
+        markTestSkipped(
+            '$filename: ${length - giveUpComment.length - '\n'.length} chars '
+            '$giveUpComment');
         return;
       }
       print("$filename: ${length} chars");
