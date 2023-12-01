@@ -43,13 +43,14 @@ void main(List<String> args) {
   }
 
   end.shortestDistance = 0;
-  final List<Pos> unsettledNodes = [end];
+  Set<Pos> unsettledNodes = {end};
   final Set<Pos> settledNodes = {};
   while (unsettledNodes.isNotEmpty) {
-    unsettledNodes
-        .sort((a, b) => a.shortestDistance.compareTo(b.shortestDistance));
-    final pos = unsettledNodes.first;
-    unsettledNodes.remove(pos);
+    final list = unsettledNodes.toList()
+      ..sort((a, b) => a.shortestDistance.compareTo(b.shortestDistance));
+    final pos = list.first;
+    list.remove(pos);
+    unsettledNodes = list.toSet();
     final neighbors = neighborsOf(pos);
     for (final next in neighbors) {
       if (settledNodes.contains(next)) {
@@ -66,12 +67,10 @@ void main(List<String> args) {
   }
   assert(!settledNodes.any((element) => element.height > 100));
 
-  // Don't know, somehow my solution is off by 2 :shrug:
   print(settledNodes
-          .where((e) => e == start)
-          .map((e) => e.shortestDistance)
-          .first -
-      2);
+      .where((e) => e == start)
+      .map((e) => e.shortestDistance)
+      .first);
 }
 
 class Pos {

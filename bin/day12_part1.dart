@@ -65,12 +65,10 @@ void main(List<String> args) {
   }
   assert(!settledNodes.any((element) => element.height > 100));
 
-  // Don't know, somehow my solution is off by 2 :shrug:
   print(settledNodes
-          .where((e) => e == start)
-          .map((e) => e.shortestDistance)
-          .first -
-      2);
+      .where((e) => e == start)
+      .map((e) => e.shortestDistance)
+      .first);
 }
 
 class Pos {
